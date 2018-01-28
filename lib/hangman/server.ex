@@ -3,7 +3,7 @@ defmodule Hangman.Server do
   alias Hangman.Game
   use   GenServer
 
-  def start_link() do
+  def start_link(_) do
     GenServer.start_link(__MODULE__, nil)
   end
 
@@ -19,6 +19,6 @@ defmodule Hangman.Server do
   def handle_call({ :tally }, _from, game) do
     { :reply, Game.tally(game), game }
   end
-  
-  
+
+
 end
