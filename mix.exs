@@ -24,7 +24,7 @@ defmodule Hangman.Mixfile do
 
   defp deps do
     [
-      { :dictionary, github: "more-advanced-elixir/dictionary" },
+      { :dictionary, path: "../dictionary", runtime: false },
     ]
   end
 end
