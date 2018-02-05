@@ -24,7 +24,13 @@ defmodule Hangman.Mixfile do
 
   defp deps do
     [
-      { :dictionary, github: "more-advanced-elixir/dictionary" },
+      {
+        :dictionary,
+        github:  "more-advanced-elixir/dictionary",
+        runtime: false,
+        branch:  "002-add-swarm"
+        },
+      { :swarm, "~> 3.0" }
     ]
   end
 end
