@@ -1,7 +1,12 @@
 defmodule Hangman do
 
+  def supervisor_name do
+    { :via, Swarm, Hangman.Supervisor }
+  end
+
   def new_game() do
-    { :ok, pid } = DynamicSupervisor.start_child(Hangman.Supervisor, Hangman.Server)
+    import DynamicSupervisor
+    { :ok, pid } = start_child(supervisor_name(), Hangman.Server)
     pid
   end
 

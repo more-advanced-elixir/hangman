@@ -7,7 +7,7 @@ defmodule Hangman.Application do
     Arcade.connect_as(:hangman)
 
     options = [
-      name:     Hangman.Supervisor,
+      name:     Hangman.supervisor_name(),
       strategy: :one_for_one,
     ]
 
