@@ -24,6 +24,7 @@ defmodule Hangman.Mixfile do
 
   defp deps do
     [
+      { :arcade, path: "../arcade" },
       {
         :dictionary,
         github:  "more-advanced-elixir/dictionary",
