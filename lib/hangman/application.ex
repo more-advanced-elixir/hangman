@@ -4,7 +4,7 @@ defmodule Hangman.Application do
 
   def start(_type, _args) do
     options = [
-      name:     Hangman.Supervisor,
+      name:     Hangman.supervisor_name(),
       strategy: :one_for_one,
     ]
 
