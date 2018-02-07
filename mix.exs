@@ -22,16 +22,24 @@ defmodule Hangman.Mixfile do
     ]
   end
 
+  @mae_ref "ex-030-add-gallows"
+
   defp deps do
     [
-      { :arcade, path: "../arcade" },
+      {
+        :arcade,
+        github: "more-advanced-elixir/arcade",
+        runtime: false,
+        ref:     @mae_ref,
+      },
       {
         :dictionary,
-        github:  "more-advanced-elixir/dictionary",
+        github: "more-advanced-elixir/dictionary",
         runtime: false,
-        branch:  "002-add-swarm"
-        },
+        ref:     @mae_ref,
+      },
       { :swarm, "~> 3.0" }
     ]
   end
+
 end
